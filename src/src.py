@@ -76,15 +76,15 @@ def Calc_pi(Iter):
     @param Iter: Number of elements in series
     @type Iter: Integers 
     """
-    sign, pii = 1, 0.0                #initialize parameters.
+    sign, pii = 1, 0.0  # initialize parameters.
     
     for n in range(Iter):
-        pii += 4 / (2 * n + 1) * sign #evaluate specific argument in the column.
-        sign *= -1                    #change sign for the next iteration.
+        pii += 4 / (2 * n + 1) * sign  # evaluate specific argument in the column.
+        sign *= -1  # change sign for the next iteration.
     
     return pii
 
-print(Calc_pi(623))                   # Executable Line for testing
+print(Calc_pi(623))  # Executable Line for testing
 #------------------------------------------------------------------------------ 
 
 def Lucky_tickets():
@@ -129,12 +129,12 @@ def RecPrint(begin, end, skip):
     @type skip:
     """
 
-    if(begin+skip >= end):
-        print(begin," ")
+    if(begin + skip >= end):
+        print(begin, " ")
     else:
-        print(begin,end=", ")
-    if(end-skip> begin):
-        RecPrint(begin+skip, end, skip)
+        print(begin, end=", ")
+    if(end - skip > begin):
+        RecPrint(begin + skip, end, skip)
                 
 RecPrint(53, 89, 10)
 #------------------------------------------------------------------------------ 
