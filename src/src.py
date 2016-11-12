@@ -1,5 +1,5 @@
 #===============================================================================
-# Python Assignment 1 test
+# Python Assignment 1
 # 
 # Student 1: Shai Hod - 304800402
 # Student 2: Dudu Abutbul - 200913671
