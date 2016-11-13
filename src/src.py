@@ -100,14 +100,18 @@ def Lucky_tickets():
     count = 0
     
     for c in range(100000, 1000000):
-        result , temp = 0, c
+        A, resultA, resultB , temp = 0, 0, 0, c
         
         while int(temp) > 0:
-            result += int(temp % 10)
-            temp //= 10             # operator "//" takes only the rational  
-                                    # part of the distribution function. 
+            if A < 3:
+                resultA += int(temp % 10)
+                temp //= 10
+                A += 1
+            else:
+                resultB += int(temp % 10)
+                temp //= 10                        
         
-        if (result % 2) == 0:
+        if resultA == resultB:
             count += 1
                     
     return count
