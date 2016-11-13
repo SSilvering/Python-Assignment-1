@@ -82,11 +82,11 @@ def Calc_pi(Iter):
     
     for n in range(Iter):
         pii += 4 / (2 * n + 1) * sign  # evaluate specific argument in the column.
-        sign *= -1  # change sign for the next iteration.
+        sign *= -1                     # change sign for the next iteration.
     
     return pii
 
-print(Calc_pi(623))  # Executable Line for testing
+print(Calc_pi(623))     # Executable Line for testing
 #------------------------------------------------------------------------------ 
 # Question -5-
 def Lucky_tickets():
@@ -102,7 +102,7 @@ def Lucky_tickets():
     for c in range(100000, 1000000):
         A, resultA, resultB , temp = 0, 0, 0, c
         
-        while int(temp) > 0:
+        while temp > 0:
             if A < 3:
                 resultA += int(temp % 10)
                 temp //= 10
