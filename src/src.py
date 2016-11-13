@@ -103,13 +103,13 @@ def Lucky_tickets():
         A, resultA, resultB , temp = 0, 0, 0, c
         
         while temp > 0:
-            if A < 3:
-                resultA += int(temp % 10)
-                temp //= 10
+            if A < 3:       # Counter of the first three digits.
+                resultA += int(temp % 10)                
+                temp //= 10 # Takes only the integer part of the multiplication function.
                 A += 1
-            else:
+            else:           # The rest of the specific number.
                 resultB += int(temp % 10)
-                temp //= 10                        
+                temp //= 10 # Takes only the integer part of the multiplication function.                       
         
         if resultA == resultB:
             count += 1
