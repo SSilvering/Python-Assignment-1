@@ -119,9 +119,33 @@ def Lucky_tickets():
 print("You've got", Lucky_tickets(), "lucky tickets!")  # Executable Line for testing
 #------------------------------------------------------------------------------ 
 # Question -6-
+def FIer (n):
+    """
+    This iterated function returns the same number if it is lower or equal to 3.
+    
+    @param n: All the numbers that satisfy n <= 3.
+    @type n: Integers.
+    """
+    
+    if n <= 3:
+        return n
+    
+def FRec(n):
+    """
+    This function calculates the sum of the column under the following conditions:    
+                F(n) = n                          if n <= 3
+                F(n) = F(n-1) + 2F(n-2) + 3F(n-3) if n >  3
 
-
-
+    @param n: All the numbers that satisfy n > 3.
+    @type n: Integers.
+    """
+    
+    if n <= 3:
+        return FIer(n)
+    else:
+        return FRec(n - 1) + 2 * FRec(n - 2) + 3 * FRec(n - 3)
+    
+print(FRec(10))                         # Executable Line for testing
 #------------------------------------------------------------------------------ 
 # Question -7-
 def RecPrint(begin, end, skip):
