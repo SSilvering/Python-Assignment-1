@@ -163,7 +163,7 @@ def Creator(num):
     elif num % 2 != 0:
         return Creator(num // 10)
     else:
-        return 10 * Creator(num // 10) + num % 10   # Building the new number.
+        return 10 * Creator(num // 10) + num % 10   # Building new number.
 
 print(Creator(-14187))                              # Executable Line for testing
 #------------------------------------------------------------------------------ 
