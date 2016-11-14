@@ -1,9 +1,9 @@
-#===============================================================================
-# Python Assignment 1
-# 
-# Student 1: Shai Hod - 304800402
-# Student 2: Dudu Abutbul - 200913671
-#===============================================================================
+#===============================================================================#
+#---------------------------Python Assignment 1---------------------------------# 
+#                                                                               #
+# Student 1:             Shai Hod     - 304800402                               #
+# Student 2:             Dudu Abutbul - 200913671                               #
+#===============================================================================#
 
 # Question -1-
 def Xnor(x, y):    
@@ -21,7 +21,7 @@ def Xnor(x, y):
         return False
     return False
 
-print(Xnor(9 > 5, 5 < 6))  # Executable Line for testing
+print(Xnor(9 > 5, 5 < 6))              # Executable Line for testing
 #------------------------------------------------------------------------------ 
 # Question -2-
 def Learn(age):    
@@ -44,7 +44,7 @@ def Learn(age):
     else:
         return "None"
 
-print(Learn(4))  # Executable Line for testing
+print(Learn(4))                        # Executable Line for testing
 #------------------------------------------------------------------------------ 
 # Question -3-
 def IsDivBy(numerator, denominator):    
@@ -67,7 +67,7 @@ def IsDivBy(numerator, denominator):
     
     return False  
     
-print(IsDivBy(36, 0))  # Executable Line for testing
+print(IsDivBy(36, 0))                  # Executable Line for testing
 #------------------------------------------------------------------------------ 
 # Question -4-
 def Calc_pi(Iter):
@@ -86,7 +86,7 @@ def Calc_pi(Iter):
     
     return pii
 
-print(Calc_pi(623))     # Executable Line for testing
+print(Calc_pi(623))                    # Executable Line for testing
 #------------------------------------------------------------------------------ 
 # Question -5-
 def Lucky_tickets():
@@ -99,15 +99,15 @@ def Lucky_tickets():
     
     count = 0
     
-    for c in range(100000, 1000000):
-        A, partA, partB , temp = 0, 0, 0, c
+    for val in range(100000, 1000000):
+        index, partA, partB , temp = 0, 0, 0, val
         
         while temp > 0:
-            if A < 3:       # Counter of the last three digits.
+            if index < 3:   # Indicates about last three digits of the number.
                 partA += int(temp % 10)                
                 temp //= 10 # Takes only the integer part of the multiplication function.
-                A += 1
-            else:           # The rest of the specific number.
+                index += 1
+            else:           # The rest of digits of that number.
                 partB += int(temp % 10)
                 temp //= 10 # Takes only the integer part of the multiplication function.                       
         
@@ -135,16 +135,17 @@ def RecPrint(begin, end, skip):
     @param skip:  In which jump size need to be done between prints.
     @type skip:   Integers.
     """
-#TODO: need to be fixed.
 
-    if(begin + skip >= end):
-        print(begin, " ")
+    if begin > end:                     # Stop Condition.
+        return
+    if begin + skip > end:              # Prints the last number without commas and create new line.
+        print(begin)
     else:
-        print(begin, end=", ")
-    if(end - skip > begin):
-        RecPrint(begin + skip, end, skip)
+        print(begin, end=", ")          # Prints the numbers according to the skips condition.             
+    
+    RecPrint(begin + skip, end, skip)
                 
-RecPrint(53, 89, 10)                                # Executable Line for testing
+RecPrint(-53, 107, 10)                  # Executable Line for testing
 #------------------------------------------------------------------------------
 # Question -8-
 def Creator(num):
@@ -183,5 +184,5 @@ def PrintReverse(number):
         PrintReverse(int(number // 10))     # operator "//" takes only the rational  
                                             # part of the distribution function.      
 
-PrintReverse(12456789019876543210123456789019876)  # Executable Line for testing
+PrintReverse(1245678901987654321012345678)  # Executable Line for testing
 #------------------------------------------------------------------------------ 
