@@ -144,12 +144,28 @@ def RecPrint(begin, end, skip):
     if(end - skip > begin):
         RecPrint(begin + skip, end, skip)
                 
-RecPrint(53, 89, 10)  # Executable Line for testing
+RecPrint(53, 89, 10)                                # Executable Line for testing
 #------------------------------------------------------------------------------
 # Question -8-
+def Creator(num):
+    """
+    This function gets an integer and returns a number 
+    that was built from the even numbers of the original number.
+    
+    @param num: Natural number, positive or negative.
+    @type num: Integer.
+    """
 
+    if num < 0:
+        return -Creator(-num)
+    elif num == 0:
+        return 0
+    elif num % 2 != 0:
+        return Creator(num // 10)
+    else:
+        return 10 * Creator(num // 10) + num % 10
 
-
+print(Creator(-14187))                              # Executable Line for testing
 #------------------------------------------------------------------------------ 
 # Question -9-
 def PrintReverse(number):
