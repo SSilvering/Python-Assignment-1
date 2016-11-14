@@ -156,14 +156,14 @@ def Creator(num):
     @type num: Integer.
     """
 
-    if num < 0:
+    if num < 0:                                     # Negative number check.
         return -Creator(-num)
-    elif num == 0:
+    elif num == 0:                                  # Stop condition.
         return 0
     elif num % 2 != 0:
         return Creator(num // 10)
     else:
-        return 10 * Creator(num // 10) + num % 10
+        return 10 * Creator(num // 10) + num % 10   # Building the new number.
 
 print(Creator(-14187))                              # Executable Line for testing
 #------------------------------------------------------------------------------ 
