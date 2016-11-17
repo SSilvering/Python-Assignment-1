@@ -145,7 +145,7 @@ def FRec(n):
     else:
         return FRec(n - 1) + 2 * FRec(n - 2) + 3 * FRec(n - 3)
     
-print(FRec(10))                         # Executable Line for testing
+print(FRec(4))                         # Executable Line for testing
 #------------------------------------------------------------------------------ 
 # Question -7-
 def RecPrint(begin, end, skip):
@@ -202,7 +202,7 @@ def PrintReverse(number):
     """
     
     if(number < 10):
-        print("%d" % (number), end=" ")
+        print("%d" % (number))
     else:
         print("%d" % (number % 10), end=" ")
         PrintReverse(int(number // 10))     # operator "//" takes only the rational  
