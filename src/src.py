@@ -121,18 +121,34 @@ print("You've got", Lucky_tickets(), "lucky tickets!")  # Executable Line for te
 # Question -6-
 def FIer (n):
     """
-    This iterated function returns the same number if it is lower or equal to 3.
-    
-    @param n: All the numbers that satisfy n <= 3.
+    This function calculates iteratively the sum of the column under following conditions:    
+                F(n) = n                          if n <= 3
+                F(n) = F(n-1) + 2F(n-2) + 3F(n-3) if n >  3
+
+    @param n: All the numbers that satisfy n > 3.
     @type n: Integers.
     """
     
-    if n <= 3:
-        return n
-    
+    if n <= 3: return n
+      
+    _, x0, x1, x2 = n - 2, 0, 1, 2
+      
+    while _ > 0:
+        res = x2 + x1 * 2 + x0 * 3
+          
+        x0 = x1
+        x1 = x2        
+        x2 = res
+          
+        _ -= 1
+                  
+    return x2
+    #TODO: need to be fixed
+print(FIer(5))                                      # Executable Line for testing
+#------------------------------------------------------------------------------ 
 def FRec(n):
     """
-    This function calculates the sum of the column under the following conditions:    
+    This function calculates recursively the sum of the column under following conditions:    
                 F(n) = n                          if n <= 3
                 F(n) = F(n-1) + 2F(n-2) + 3F(n-3) if n >  3
 
@@ -141,9 +157,9 @@ def FRec(n):
     """
     
     if n <= 3:
-        return FIer(n)
-    else:
-        return FRec(n - 1) + 2 * FRec(n - 2) + 3 * FRec(n - 3)
+        return n
+    
+    return FRec(n - 1) + 2 * FRec(n - 2) + 3 * FRec(n - 3)
     
 print(FRec(5))                         # Executable Line for testing
 #------------------------------------------------------------------------------ 
