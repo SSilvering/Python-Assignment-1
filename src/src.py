@@ -143,7 +143,6 @@ def FIer (n):
         _ -= 1
                   
     return x2
-    #TODO: need to be fixed
 print(FIer(5))                                      # Executable Line for testing
 #------------------------------------------------------------------------------ 
 def FRec(n):
